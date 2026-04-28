@@ -2,9 +2,9 @@
 
 Projeto desenvolvido durante um hackathon, com o objetivo de simular e otimizar a organização de containers em um pátio logístico utilizando WPF (Windows Presentation Foundation).
 
-🚀 Funcionalidades
-📥 Importação de dados via JSON
-💾 Persistência de containers em arquivo
+🚀 Funcionalidades -
+📥 Importação de dados via JSON -
+💾 Persistência de containers em arquivo -
 📊 Organização automática do pátio
 🔄 Otimização baseada na data de saída dos containers
 📍 Controle de posição (Bay, Row, Tier)
