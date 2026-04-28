@@ -5,14 +5,14 @@ Projeto desenvolvido durante um hackathon, com o objetivo de simular e otimizar 
 🚀 Funcionalidades -
 📥 Importação de dados via JSON -
 💾 Persistência de containers em arquivo -
-📊 Organização automática do pátio
-🔄 Otimização baseada na data de saída dos containers
-📍 Controle de posição (Bay, Row, Tier)
-⚠️ Detecção de bloqueios (containers sobrepostos)
-📝 Sistema de logs de movimentação
-📈 Contagem de movimentações por container
-↩️ Desfazer otimização
-🧠 Lógica do Sistema
+📊 Organização automática do pátio -
+🔄 Otimização baseada na data de saída dos containers -
+📍 Controle de posição (Bay, Row, Tier) -
+⚠️ Detecção de bloqueios (containers sobrepostos) -
+📝 Sistema de logs de movimentação -
+📈 Contagem de movimentações por container -
+↩️ Desfazer otimização -
+🧠 Lógica do Sistema -
 
 O sistema organiza os containers com base na data de saída, priorizando aqueles que sairão primeiro.
 
