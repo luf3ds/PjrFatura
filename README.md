@@ -1,55 +1,96 @@
-📦 Sistema de Organização de Containers (WPF)
+💼 Sistema de Faturamento e Cadastro (C#)
 
-Projeto desenvolvido durante um hackathon, com o objetivo de simular e otimizar a organização de containers em um pátio logístico utilizando WPF (Windows Presentation Foundation).
+Projeto desenvolvido em C# com foco em gestão de clientes, fornecedores, produtos e usuários, incluindo validações, controle de dados e persistência via serialização.
 
-🚀 Funcionalidades -
-📥 Importação de dados via JSON -
-💾 Persistência de containers em arquivo -
-📊 Organização automática do pátio -
-🔄 Otimização baseada na data de saída dos containers -
-📍 Controle de posição (Bay, Row, Tier) -
-⚠️ Detecção de bloqueios (containers sobrepostos) -
-📝 Sistema de logs de movimentação -
-📈 Contagem de movimentações por container -
-↩️ Desfazer otimização -
-🧠 Lógica do Sistema -
+🚀 Funcionalidades
+👤 Cadastro de Clientes e Fornecedores
+📞 Gerenciamento de Contatos
+📦 Cadastro de Produtos
+🔐 Controle de Usuários e autenticação
+💳 Controle de limite de crédito
+🧾 Validação de CPF e CNPJ
+💾 Serialização e desserialização de dados
+🔢 Geração automática de códigos
+📊 Ordenação de entidades (IComparable)
+🧠 Estrutura do Sistema
 
-O sistema organiza os containers com base na data de saída, priorizando aqueles que sairão primeiro.
+O projeto segue uma estrutura orientada a objetos, separando responsabilidades em classes específicas.
 
-📌 Exemplo da lógica:
-Containers são ordenados por data de saída
-Distribuídos entre as baias (bays)
-Empilhados respeitando o limite de altura (tiers)
-Evita bloqueios sempre que possível
+🏗️ Classes Principais
+👤 Cliente
 
-🏗️ Estrutura do Projeto
-📁 Classes principais:
-Container
-- Representa um container no sistema
-- Possui posição e datas
+Representa um cliente com controle de crédito e dados jurídicos.
 
-PatioService
-- Responsável pela lógica principal do pátio
-- Otimização, movimentação e organização
+Adiciona limite de crédito
+Subtrai limite com validação
+Possui contato associado
+🏢 PessoaJuridica
 
-JsonService
-- Leitura e escrita de arquivos JSON
+Classe base para entidades com CNPJ.
 
-LogService
-- Registro de ações e movimentações
-- Contagem de operações por container
+Validação de CNPJ integrada
+Base para Cliente e Fornecedor
+📞 Contato
 
+Representa informações de contato.
+
+Validação de CPF
+Dados como telefone, email e cargo
+🚚 Fornecedor
+
+Entidade fornecedora de produtos.
+
+Possui contato e endereço
+Herda de PessoaJuridica
+📦 Produto
+
+Representa produtos cadastrados no sistema.
+
+Código gerado automaticamente
+Associação com fornecedor
+Implementa ordenação (IComparable)
+👤 Usuário
+
+Controle de usuários do sistema.
+
+Login e senha
+Controle de perfil
+Atualização de dados
+Geração de ID automático
+🧾 Apresentação
+
+Define características do produto (ex: peso).
+
+💾 Serializa
+
+Responsável por salvar e carregar dados em arquivos.
+
+Serialização com BinaryFormatter
+Suporte para:
+Clientes
+Fornecedores
+Produtos
+Usuários
+Apresentações
+🛠️ Util
+
+Classe utilitária com validações e formatações.
+
+Validação de CPF e CNPJ
+Formatação de CPF
+Regras de senha
 ⚙️ Tecnologias Utilizadas
-- C#
-- WPF
-- Newtonsoft.Json
-- .NET
-
-🏁 Objetivo do Projeto
-Demonstrar habilidades em:
-
-Estruturação de sistemas em C#
-Manipulação de dados (JSON)
-Lógica de otimização
-Organização de código (services)
-Desenvolvimento desktop com WPF
+C#
+.NET
+Programação Orientada a Objetos (POO)
+Serialização com BinaryFormatter
+🔐 Validações Implementadas
+✔ CPF válido
+✔ CNPJ válido
+✔ Senha segura (mínimo 8 caracteres, maiúsculas, minúsculas, número e especial)
+✔ Controle de crédito (não permite negativo ou exceder limite)
+💡 Lógica de Negócio
+Clientes possuem limite de crédito controlado
+Produtos são vinculados a fornecedores
+Usuários possuem níveis de acesso (perfil)
+Dados são persistidos localmente via serialização
