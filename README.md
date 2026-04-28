@@ -30,6 +30,7 @@ Classe base para entidades com CNPJ.
 
 Validação de CNPJ integrada
 Base para Cliente e Fornecedor
+
 📞 Contato
 
 Representa informações de contato.
